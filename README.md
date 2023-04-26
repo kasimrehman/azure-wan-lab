@@ -225,7 +225,7 @@ After the deployment, you can connect to the CSR CLI via SSH (default username i
 
 ### Deploy configuration manually
 
-You can copy this config into a text editor, replace the parameters specific to your environment (public IP addresses, BGP neighbor IP address)
+After entering into [configuration mode](https://microsoft.github.io/WhatTheHack/041-VirtualWAN/Student/Resources/csr_cheatsheet.html), you can copy this config into a text editor, replace the parameters specific to your environment (public IP addresses, BGP neighbor IP address)
 
 ```
 crypto ikev2 proposal azure-proposal
