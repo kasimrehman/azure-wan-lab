@@ -225,7 +225,7 @@ After the deployment, you can connect to the CSR CLI via SSH (default username i
 
 ### Deploy configuration manually
 
-You can copy this config into a text editor, replace the parameters specific to your environment (public IP addresses, BGP neighbor IP address)
+You can copy this config into a text editor, replace the parameters specific to your environment (public IP addresses, BGP neighbor IP address, pre-shared key)
 
 ```
 crypto ikev2 proposal azure-proposal
@@ -281,6 +281,9 @@ router bgp 65101
  neighbor 192.168.0.4 update-source GigabitEthernet1
 !
 ip route 192.168.0.4 255.255.255.255 Tunnel0
+!
+end
+wr mem
 ```
 
 Do not forget to save your configuration! If you want to use two tunnels, you can find a sample config [here](csr_config_2tunnels.txt), that you can take and replace the values of the public/private addresses of the VPN gateways accordingly.
